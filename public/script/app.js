@@ -16,11 +16,6 @@ angular.module('market', ['ui.router', 'ngAnimate', 'ngTouch', 'ngMessages']).co
     templateUrl: './script/views/profile.html',
     controller: 'profileController'
   })
-  .state('departments', {
-    url: '/departments',
-    templateUrl: './script/views/departments.html',
-    controller: 'departmentController'
-  })
   .state('department', {
     url: '/department/:id',
     templateUrl: './script/views/departmentdetails.html',
@@ -28,7 +23,7 @@ angular.module('market', ['ui.router', 'ngAnimate', 'ngTouch', 'ngMessages']).co
   })
   .state('shoppinglists', {
     url: '/shoppinglist',
-    templateUrl: './script/views/shoppinglist.html',
+    templateUrl: './script/views/shoppinglists.html',
     controller: 'shoppingListController'
   })
   .state('shoppinglist', {
@@ -53,11 +48,11 @@ angular.module('market', ['ui.router', 'ngAnimate', 'ngTouch', 'ngMessages']).co
   })
   .state('checkout', {
     url: '/checkout',
-    templateUrl: '.script/views/checkout.html',
+    templateUrl: './script/views/checkout.html',
     controller: 'checkoutController'
   })
   .state('orders', {
-    url: 'orders',
+    url: '/orders',
     templateUrl: './script/views/orderhistory.html',
     controller: 'historyController'
   })
