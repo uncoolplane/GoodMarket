@@ -1,1 +1,7 @@
 <h2>Product Details</h2>
+
+<h3>{{product.name}}</h3>
+<p>{{department.name}}</p>
+<p>{{product.description}}</p>
+<p>{{product.price}}</p>
+<p><button type="button" name="button" ng-click="removeFromCart()" ng-hide="!isInCart">-</button>{{product.quantity}} <button type="button" name="button" ng-click="addToCart()">+</button> </p>

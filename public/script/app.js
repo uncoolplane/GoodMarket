@@ -4,7 +4,8 @@ angular.module('market', ['ui.router', 'ngAnimate', 'ngTouch', 'ngMessages']).co
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: './script/views/home.html'
+    templateUrl: './script/views/home.html',
+    controller: 'homeController'
   })
   .state('login', {
     url: '/login',
