@@ -1,0 +1,18 @@
+<div class="container-fluid bg-2 text-center">
+  <h3>Departments</h3>
+
+  <div class="row text-center">
+    <div class="col" ng-repeat="department in departments">
+      <div class="thumbnail">
+        <a ui-sref="department({ id: department.id })">
+          <img src="http://placehold.it/200x200" alt="Lights" style="width:100%">
+          <div class="caption">
+            <p>{{department.name}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

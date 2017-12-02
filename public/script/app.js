@@ -7,6 +7,11 @@ angular.module('market', ['ui.router', 'ngAnimate', 'ngTouch', 'ngMessages']).co
     templateUrl: './script/views/home.html',
     controller: 'homeController'
   })
+  .state('store', {
+    url: '/store',
+    templateUrl: './script/views/store.html',
+    controller: 'storeController'
+  })
   .state('login', {
     url: '/login',
     templateUrl: './script/views/login.html',

@@ -1,18 +1,26 @@
-<div class="container-fluid bg-2 text-center">
-  <h3>Departments</h3>
-
-  <div class="row text-center">
-    <div class="col-md-3" ng-repeat="department in departments">
-      <div class="thumbnail">
-        <a ui-sref="department({ id: department.id })">
-          <img src="http://placehold.it/200x200" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p>{{department.name}}</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
+<div class="row">
+  <div class="col-md-8">
+    <h1>Good Market</h1>
+    <p>We strive to provide you and your family the opportunity to feed your family only healthy and organic food.</p>
   </div>
+  <div class="col-md-4">
+    <div class="form-container">
+            <div class="media-container-column">
+                <form class="signup-form">
+                    <div data-for="name">
+                        <div class="form-group">
+                            <input type="text" class="form-control px-3" name="name" data-form-field="Name" placeholder="Name" required="" id="name-header15-h">
+                        </div>
+                    </div>
+                    <div data-for="email">
+                        <div class="form-group">
+                            <input type="email" class="form-control px-3" name="email" data-form-field="Email" placeholder="Email" required="" id="email-header15-h">
+                        </div>
+                    </div>
 
+                    <span class="input-group-btn"><button href="" type="submit" class="btn btn-secondary btn-form display-4">SIGN UP</button></span>
+                </form>
+            </div>
+        </div>
+  </div>
 </div>
