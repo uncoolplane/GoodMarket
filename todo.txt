@@ -1,0 +1,4 @@
+--Cart Count Directive
+--Formatting on Department Details ... strange wrapping
+--Remove from Cart on Product Detail (seperate services, quantity not in product service)
+--Formatting on Product Detail

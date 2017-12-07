@@ -6,15 +6,18 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
+const credentials = require('./credentials');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = module.exports = express();
 
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+//Database
+const massive = require('massive');
+// let connectionString = "postgres://" + credentials.username + ":" + credentials.password + "@" + credentials.server + "/" + credentials.database;
+let connectionString = "postgres://postgres:admin@localhost/market";
+let massiveInstance = massive.connectSync({connectionString});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -23,7 +26,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 app.use('/', index);
 app.use('/users', users);
