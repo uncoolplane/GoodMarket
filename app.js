@@ -10,14 +10,21 @@ const credentials = require('./credentials');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var departments = require('./routes/departments');
 
 var app = module.exports = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 //Database
 const massive = require('massive');
 // let connectionString = "postgres://" + credentials.username + ":" + credentials.password + "@" + credentials.server + "/" + credentials.database;
 let connectionString = "postgres://postgres:admin@localhost/market";
-let massiveInstance = massive.connectSync({connectionString});
+let instance = massive.connectSync({connectionString});
+
+app.set('db', instance);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -28,7 +35,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/api', users);
+app.use('/api', departments);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

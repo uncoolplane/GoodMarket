@@ -26,6 +26,7 @@ module.exports = {
       }
       res.send(departments);
     })
+    // res.send(departments);
   },
   getDepartment: function (req, res, next) {
     var db = req.app.get('db');
@@ -38,7 +39,7 @@ module.exports = {
       res.send(department);
     })
   },
-  getDepartmentProducts = function (req, res, next) {
+  getDepartmentProducts : function (req, res, next) {
     var db = req.app.get('db');
     // if !db return;
     var id = req.params.id;
@@ -49,7 +50,7 @@ module.exports = {
       res.send(products);
     })
 
-  }
+  },
   createDepartment : function (req, res, next) {
     var db = req.app.get('db');
     // if !db return;
