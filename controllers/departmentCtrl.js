@@ -1,22 +1,6 @@
 const departments = require('../bootstrap/department.json');
 
 module.exports = {
-  loadDepartments : function (req, res, next) {
-    var db = req.app.get('db');
-    for (var i = 0; i < departments.length; i++) {
-      let department = departments[i];
-
-      db.insert_department([department.label], function (err, department) {
-        if (err) {
-          console.log('loadDepartments', err);
-        } else {
-          console.log('loading...', department);
-        }
-      })
-    }
-
-    res.send({isSuccessful: true})
-  },
   getDepartments: function (req, res, next) {
     var db = req.app.get('db');
     // if !db return;

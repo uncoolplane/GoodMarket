@@ -11,6 +11,7 @@ const credentials = require('./credentials');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var departments = require('./routes/departments');
+var products = require('./routes/products');
 
 var app = module.exports = express();
 
@@ -37,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/api', users);
 app.use('/api', departments);
+app.use('/api', products);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

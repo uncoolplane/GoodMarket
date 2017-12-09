@@ -1,0 +1,16 @@
+INSERT INTO department( label, id) VALUES ('Baby',1);
+INSERT INTO department( label, id) VALUES ('Bakery',2);
+INSERT INTO department( label, id) VALUES ('Beauty & Personal Care',3);
+INSERT INTO department( label, id) VALUES ('Beer & Wine',4);
+INSERT INTO department( label, id) VALUES ('Dairy',5);
+INSERT INTO department( label, id) VALUES ('Deli',6);
+INSERT INTO department( label, id) VALUES ('Floral',7);
+INSERT INTO department( label, id) VALUES ('Frozen Food',8);
+INSERT INTO department( label, id) VALUES ('Grocery',9);
+INSERT INTO department( label, id) VALUES ('Health & Nutrition',10);
+INSERT INTO department( label, id) VALUES ('Housewares',11);
+INSERT INTO department( label, id) VALUES ('Meat',12);
+INSERT INTO department( label, id) VALUES ('Non-Foods',13);
+INSERT INTO department( label, id) VALUES ('Pet',14);
+INSERT INTO department( label, id) VALUES ('Produce',15);
+INSERT INTO department( label, id) VALUES ('Seafood',16);

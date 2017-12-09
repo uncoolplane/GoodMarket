@@ -4,8 +4,11 @@ var departmentCtrl = require('../controllers/departmentCtrl');
 
 const routepath = '/departments';
 
-/* GET departments listing. */
 router.get(routepath, departmentCtrl.getDepartments);
-router.put(routepath + '/load', departmentCtrl.loadDepartments)
+router.get(routepath + '/:id', departmentCtrl.getDepartment);
+router.get(routepath + '/:id/products', departmentCtrl.getDepartmentProducts);
+router.put(routepath, departmentCtrl.createDepartment);
+router.post(routepath, departmentCtrl.updateDepartment);
+router.delete(routepath + '/:id', departmentCtrl.deleteDepartment);
 
 module.exports = router;
