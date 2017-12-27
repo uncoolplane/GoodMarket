@@ -1,20 +1,23 @@
-<div class="container-fluid bg-2 text-center">
+<section id="department" class="section green">
+<div class="container">
 <h2>{{department.name}} Department</h2>
 <div class="row text-center">
-  <div class="col-md-3" ng-repeat="product in products">
-    <div class="thumbnail">
-      <a ui-sref="product({ id: product.id })">
-        <img src="http://placehold.it/200x200" alt="Lights" style="width:100%">
+  <div class="span3 animated-fast flyIn" ng-repeat="product in products">
+    <div class="service-box">
+      <!-- <a ui-sref="product({ id: product.id })"> -->
+        <img src="http://placehold.it/160x160" alt="Lights" style="width:100%">
         <div class="caption">
           <p><strong>{{product.name}}</strong></p>
           <p>{{product.description}}</p>
           <p>{{product.price}}</p>
         </div>
-      </a>
-      <div class="">
-        <button class="btn" ng-click="addToCart(product.id)">Add To Cart</button>
-      </div>
+      <!-- </a> -->
+      <p>
+        <button class="btn btn-default" ng-click="addToCart(product.id)">Add To Cart</button>
+      </p>
     </div>
   </div>
 </div>
 </div>
+<p class="text-center"><a class="btn btn-primary" href="#" ui-sref="store">More Departments</a></p>
+</section>

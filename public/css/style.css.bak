@@ -1,0 +1,85 @@
+body {
+  /*font-size: 18px;*/
+  font-family: 'Roboto', sans-serif;
+  /*line-height: 1.8;*/
+  /*color: #f5f6f7;*/
+}
+
+p {
+  /*font-size: 16px;*/
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container {
+  padding-top:60px;
+}
+
+.container-fluid {
+  background-color: #939393;
+  border-radius: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.small-image {
+  max-height: 30px;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.margin {
+  margin-bottom: 45px;
+}
+
+@media (min-width: 767px) {
+  .navbar-brand-centered {
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 160px;
+      text-align: center;
+      background-color: transparent;
+  }
+  .navbar>.container .navbar-brand-centered,
+  .navbar>.container-fluid .navbar-brand-centered {
+      margin-left: -80px;
+  }
+}
+
+form.signup-form {
+  border:1px solid red;
+  border-radius: 20px;
+  padding:1em;
+}
+
+form.signup-form .input-group-btn {
+  text-align:center;
+}
+
+form.signup-form .input-group-btn button {
+  background-color: red;
+  color: white;
+}
+
+#portfolio .row{
+  margin:50px /* margin around the "whole row" not inbetween "stacked rows" */
+}
+
+#portfolio .img-thumbnail{
+  border:150px;
+  border-radius:4px; /* slight round in images in gallery */
+  margin:0px;
+  padding:0px;
+
+}
