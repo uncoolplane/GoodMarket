@@ -1,18 +1,19 @@
-<div class="container-fluid bg-2 text-center">
-  <h3>Departments</h3>
-
-  <div class="row text-center">
-    <div class="col" ng-repeat="department in departments">
-      <div class="thumbnail">
-        <a ui-sref="department({ id: department.id })">
-          <img src="http://placehold.it/200x200" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p>{{department.name}}</p>
-          </div>
-        </a>
+<section id="services" class="section orange">
+  <div class="container">
+    <h4>Departments</h4>
+    <!-- Four columns -->
+    <div class="row">
+      <div ng-repeat="department in departments track by $index" class="span3 animated-fast flyIn">
+        <!-- <div ng-class="{'clearfix': $index%3 === 0}"></div> -->
+        <div class="service-box">
+          <img src="http://placehold.it/160x160" alt="" />
+          <h2>{{department.name}}</h2>
+          <p>
+            <a class="btn btn-default" ui-sref="department({ id: department.id })">View Products</a>
+          </p>
+        </div>
       </div>
+
     </div>
-
   </div>
-
-</div>
+</section>
